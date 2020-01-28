@@ -199,8 +199,8 @@ abstract class Realdom
                     $hints[]                = $hint;
                     next($this->_arguments);
                 }
-
-                while (list($name, $default) = each($this->_arguments)) {
+                
+                foreach ($this->_arguments as list($name, $default)){
                     if (is_int($name)) {
                         $j = 0;
                         array_walk(
